@@ -35,7 +35,10 @@ const routes: Routes = [
             loadChildren: () =>
               import('../tab3/tab3.module').then(m => m.Tab3PageModule)
           },
-         { path: ':recipe-details', loadChildren: './recipe-details/recipe-details.module#RecipeDetailsPageModule' },
+         { path: ':recipe-details', 
+         loadChildren: ()=> 
+         import('../recipe-details/recipe-details.module').then(m =>{m.RecipeDetailsPageModule})
+         },
        ]
       },
       {
